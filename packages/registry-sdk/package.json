@@ -1,0 +1,40 @@
+{
+  "name": "@cipher/registry-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "description": "Typed SDK for the Zama Confidential Token Wrappers Registry + ERC-7984 wrappers. Pure-viem core (no WASM for reads) + TanStack Query React hooks.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react/index.ts"
+  },
+  "peerDependencies": {
+    "viem": ">=2",
+    "react": ">=19",
+    "wagmi": ">=3",
+    "@tanstack/react-query": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "wagmi": { "optional": true },
+    "@tanstack/react-query": { "optional": true }
+  },
+  "dependencies": {
+    "@cipher/addresses": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "viem": "catalog:",
+    "react": "catalog:",
+    "@types/react": "catalog:",
+    "wagmi": "catalog:",
+    "@tanstack/react-query": "catalog:",
+    "vitest": "catalog:"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  }
+}

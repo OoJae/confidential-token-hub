@@ -1,0 +1,27 @@
+{
+  "name": "confidential-token-hub",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.1.2",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build:packages": "pnpm --filter @cipher/addresses build",
+    "dev": "pnpm --filter token-hub dev",
+    "build": "pnpm --filter @cipher/addresses build && pnpm --filter token-hub build",
+    "start": "pnpm --filter token-hub start",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm --filter @cipher/registry-sdk test",
+    "e2e": "node scripts/e2e-token-hub.ts",
+    "spike:unwrap": "node scripts/spike-unwrap.ts"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.0",
+    "typescript": "catalog:",
+    "viem": "catalog:",
+    "@cipher/addresses": "workspace:*",
+    "@cipher/fhe-client": "workspace:*",
+    "@cipher/registry-sdk": "workspace:*"
+  }
+}

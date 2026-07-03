@@ -1,0 +1,63 @@
+/*
+ * cipher-suite design tokens — Tailwind v4 CSS-first theme.
+ * One accent (cipher teal — deliberately not Zama yellow), a neutral surface
+ * ramp, a dedicated "locked/encrypted" tone, and a mono stack for hashes.
+ *
+ * Apps import this from globals.css:
+ *   @import "tailwindcss";
+ *   @import "@cipher/ui/styles.css";
+ *   @source "../../../packages/ui/src";
+ */
+@theme {
+  --color-accent: oklch(0.72 0.15 195);
+  --color-accent-strong: oklch(0.62 0.17 195);
+  --color-accent-soft: oklch(0.95 0.04 195);
+
+  --color-surface-50: oklch(0.985 0 0);
+  --color-surface-100: oklch(0.967 0.001 286.4);
+  --color-surface-200: oklch(0.92 0.004 286.3);
+  --color-surface-300: oklch(0.871 0.006 286.3);
+  --color-surface-400: oklch(0.705 0.015 286.1);
+  --color-surface-500: oklch(0.552 0.016 285.9);
+  --color-surface-600: oklch(0.442 0.017 285.8);
+  --color-surface-700: oklch(0.37 0.013 285.8);
+  --color-surface-800: oklch(0.274 0.006 286);
+  --color-surface-900: oklch(0.21 0.006 285.9);
+  --color-surface-950: oklch(0.141 0.005 285.8);
+
+  --color-locked: oklch(0.65 0.02 260);
+  --color-locked-bg: oklch(0.93 0.01 260);
+
+  --color-danger: oklch(0.577 0.245 27.3);
+  --color-success: oklch(0.627 0.17 149.2);
+  --color-warning: oklch(0.681 0.162 75.8);
+
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+
+  --radius-chip: 0.5rem;
+
+  --animate-reveal-pop: reveal-pop 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  --animate-pulse-soft: pulse-soft 1.6s ease-in-out infinite;
+
+  @keyframes reveal-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.85) translateY(4px);
+      filter: blur(6px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+      filter: blur(0);
+    }
+  }
+  @keyframes pulse-soft {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.55;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@import "@cipher/ui/styles.css";
+
+/* Tailwind v4 auto content-detection does NOT follow symlinked workspace
+   packages — without these, classnames used inside @cipher/* get purged. */
+@source "../../../packages/ui/src";
+@source "../../../packages/fhe-client/src";
+@source "../../../packages/registry-sdk/src";
+
+body {
+  @apply bg-surface-50 text-surface-950 antialiased dark:bg-surface-950 dark:text-surface-50;
+}

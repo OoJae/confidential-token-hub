@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+dist/
+artifacts/
+cache/
+typechain-types/
+fhevmTemp/
+coverage/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+.turbo/
+.DS_Store

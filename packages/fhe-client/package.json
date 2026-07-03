@@ -1,0 +1,39 @@
+{
+  "name": "@cipher/fhe-client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./react": "./src/react/index.ts",
+    "./node": "./src/node.ts"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "viem": ">=2",
+    "wagmi": ">=3",
+    "@tanstack/react-query": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "wagmi": { "optional": true },
+    "@tanstack/react-query": { "optional": true }
+  },
+  "dependencies": {
+    "@cipher/addresses": "workspace:*",
+    "@zama-fhe/sdk": "3.2.0",
+    "@zama-fhe/react-sdk": "3.2.0"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "react": "catalog:",
+    "@types/react": "catalog:",
+    "viem": "catalog:",
+    "wagmi": "catalog:",
+    "@tanstack/react-query": "catalog:"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}

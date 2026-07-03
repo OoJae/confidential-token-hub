@@ -1,0 +1,28 @@
+{
+  "name": "@cipher/ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "sideEffects": ["*.css"],
+  "exports": {
+    ".": "./src/index.ts",
+    "./styles.css": "./src/styles.css"
+  },
+  "peerDependencies": {
+    "react": ">=19",
+    "react-dom": ">=19"
+  },
+  "dependencies": {
+    "@cipher/addresses": "workspace:*",
+    "clsx": "^2.1.1"
+  },
+  "devDependencies": {
+    "typescript": "catalog:",
+    "react": "catalog:",
+    "@types/react": "catalog:",
+    "tailwindcss": "catalog:"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  }
+}

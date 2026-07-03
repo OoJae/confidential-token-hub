@@ -1,0 +1,20 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+
+allowBuilds:
+  keccak: true
+  sharp: true
+
+catalog:
+  react: "19.2.x"
+  react-dom: "19.2.x"
+  "@types/react": "^19"
+  "@types/react-dom": "^19"
+  viem: "2.54.x"
+  wagmi: "3.6.x"
+  "@tanstack/react-query": "5.101.x"
+  typescript: "~5.9.0"
+  tailwindcss: "^4.3.0"
+  "@tailwindcss/postcss": "^4.3.0"
+  vitest: "^4.1.9"
