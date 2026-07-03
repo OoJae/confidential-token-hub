@@ -11,7 +11,7 @@
     "dev": "pnpm --filter token-hub dev",
     "build": "pnpm --filter @cipher/addresses build && pnpm --filter token-hub build",
     "start": "pnpm --filter token-hub start",
-    "typecheck": "pnpm -r typecheck",
+    "typecheck": "pnpm build:packages && pnpm -r typecheck",
     "test": "pnpm --filter @cipher/registry-sdk test",
     "e2e": "node scripts/e2e-token-hub.ts",
     "spike:unwrap": "node scripts/spike-unwrap.ts"
